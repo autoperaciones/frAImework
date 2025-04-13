@@ -89,7 +89,7 @@
 </script>
 
 <!-- Contenedor general que ocupa toda la pantalla -->
-<div bind:this={container} class="fixed inset-0 flex flex-col m-0 p-5 bg-amber-200">
+<div bind:this={container} class="fixed inset-0 flex flex-col m-0 p-5 bg-gradient-to-br from-yellow-100 to-red-100 z-50">
 
   <!-- Contenedor de la imagen del mesero -->
   <div class="
@@ -107,11 +107,12 @@
   </div>
 
   <!-- Contenedor del texto tipo cuadro RPG -->
-  <div class="
-    flex justify-center items-start
-    h-[45%] sm:h-[35%] lg:h-[25%] w-xs sm:w-md lg:w-xl mx-auto
-    bg-white bg-opacity-80 shadow-lg rounded-xl border-4 border-gray-800
-    pt-10 px-4 sm:px-6 lg:px-8
+<div class="
+  flex justify-center items-start
+  h-[45%] sm:h-[35%] lg:h-[25%] w-xs sm:w-md lg:w-xl mx-auto
+  bg-gradient-to-b from-red-50 to-white bg-opacity-100
+  shadow-lg rounded-xl border-6 border-gray-600
+  pt-10 px-4 sm:px-6 lg:px-8 z-50
   ">
     <div bind:this={textoContainer} class="flex items-center text-center max-w-2xl">
       <p class="text-xl sm:text-2xl lg:text-3xl text-gray-800 font-semibold leading-snug">
@@ -119,5 +120,6 @@
       </p>
     </div>
   </div>
+
 
 </div>
