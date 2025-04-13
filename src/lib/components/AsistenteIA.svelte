@@ -85,7 +85,7 @@
 </script>
 
 <!-- Contenedor general que ocupa toda la pantalla -->
-<div bind:this={container} class="fixed inset-0 flex flex-col m-2 p-6 z-50 overflow-hidden">
+<div bind:this={container} class="fixed inset-0 flex flex-col justify-end m-0 p-6 z-50 overflow-hidden">
 
   <!-- Fondo del asistente -->
   <img
@@ -95,7 +95,7 @@
   />
 
   <!-- Contenedor de la imagen del mesero -->
-  <div class="flex justify-center items-end h-[55%] sm:h-[65%] lg:h-[75%]">
+  <div class="flex justify-center items-end h-[40%] sm:h-[45%] lg:h-[55%]">
     {#if imagenActual}
       <img
         bind:this={imagenMesero}
@@ -109,7 +109,7 @@
   <!-- Contenedor del texto tipo cuadro RPG -->
   <div class="
     flex justify-center items-start
-    h-[45%] sm:h-[35%] lg:h-[25%] w-xs sm:w-md lg:w-xl mx-auto
+    h-[40%] sm:h-[35%] lg:h-[25%] w-xs sm:w-md lg:w-xl mx-auto
     bg-gradient-to-b from-red-50 to-white bg-opacity-100
     shadow-lg rounded-xl border-6 border-gray-600
     pt-10 px-4 sm:px-6 lg:px-8 z-20
