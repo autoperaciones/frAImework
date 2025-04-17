@@ -1,6 +1,10 @@
+<!-- components/restaurantes/AsisitenteIA.svelte -->
+
 <script lang="ts">
   import { onMount, tick } from 'svelte'
   import { gsap } from 'gsap'
+  import { irA } from '$lib/stores/routes'
+  import type { Zona } from '$lib/stores/routes'
 
   import meseroInvitacion from '$lib/assets/images/mesero-invitacion.webp'
   import meseroAlegre from '$lib/assets/images/mesero-alegre.webp'
@@ -105,8 +109,18 @@
 
   // Manejador de opciones (selección del usuario)
   function seleccionarOpcion(opcion: { label: string; value: string }) {
+    if (opcion.value.startsWith('ir:')) {
+      const destino = opcion.value.split(':')[1]
+      irA(destino as Zona)
+      console.log('Seleccionando opción:', opcion)
+      console.log('Navegar a:', destino)
+      return
+    }
+
+    // Otras acciones que no sean navegación
     onOpcionSeleccionada?.(opcion.value)
   }
+
 
   // Espera asincrónica
   function esperar(ms: number) {
